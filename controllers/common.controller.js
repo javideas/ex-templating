@@ -7,3 +7,7 @@ module.exports.home = (req, res) => {
 module.exports.tweets = (req, res) => {
     res.render('tweets');
 };
+
+module.exports.config = (req, res) => {
+    res.render('config');
+};

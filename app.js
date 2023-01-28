@@ -18,7 +18,11 @@ app.use(logger('dev'));
 // Iteration 5: configure body parser
 
 // Iteration 2: configure global template vars (res.locals.*)
-
+app.use((req, res, next) => {
+    res.locals.path = req.path;
+    next();
+});
+  
 // Iteration 1: configure router
 const router = require('./config/routes.config');
 app.use(router);
